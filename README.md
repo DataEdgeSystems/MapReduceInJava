@@ -20,7 +20,24 @@ MapReduce is a programming model and an associated implementation for processing
 
 The following pseudocode shows the basic structure of a MapReduce program that lists the common friends of users. The map function emits the <key, value> intermediate pairs. Reduce function gives the list of common friends. 
 
+// input: Social Media User List
+// intermediate output: key=(A,B); value=(friend list)
 
+Map(input User u, friendList){ 
+	for each User x in friendList 		//Applied to each input element
+		EmitIntermediate((u,x), list(friendsOf(u));	// <key, val> intermediate pairs
+}
+
+// intermediate output: key=(A,B), value=friend list
+//output: key=(A,B); value=matches
+
+Reduce(input key, values1[ ] values2[ ]){
+	for each v in values1
+		if(v exists in values2)			//Applied to all pairs with the same key
+			resultList.append(v);
+	
+	Emit(key, resultList);				//Final output sorted by key
+}
 
 
 3) GENERAL STRUCTURE AND CONTROL FLOW

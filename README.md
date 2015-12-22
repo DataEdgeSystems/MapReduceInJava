@@ -48,16 +48,20 @@ The scheduler creates and manages the threads that run all Map and Reduce tasks.
 Figure 1
 
 4) IMPLEMENTATION
-	We have implemented the project with Java using the thread utilization of JVM. In our implementation we simulated MapReduce algorithm with its intermediate steps and outputs. Locality and cache affinity is dependant on the block size so in our implementation we gave the option to the end-user. In our experiments large block size like 500 had around 6 times slower performance where block size of 25 had got the job done around 7 minutes. We couldn’t implement dynamic load balancing just yet but using the thread-pool libraries it is only a few hours work. 
+We have implemented the project with Java using the thread utilization of JVM. In our implementation we simulated MapReduce algorithm with its intermediate steps and outputs. Locality and cache affinity is dependant on the block size so in our implementation we gave the option to the end-user. In our experiments large block size like 500 had around 6 times slower performance where block size of 25 had got the job done around 7 minutes. We couldn’t implement dynamic load balancing just yet but using the thread-pool libraries it is only a few hours work. 
 	
 
-	Our dataset is coming from Facebook and includes more than 4 thousand people with their identities kept secret. Final output of our algorithm gives the common friends of those 4 thousand people if they are friends already. This output is close to 400 mb of data uncompressed and text based. Considering we only used an Intel i5, with 4 cores; this amount of data had pretty good processing time.
+Our dataset is coming from Facebook and includes more than 4 thousand people with their identities kept secret. Final output of our algorithm gives the common friends of those 4 thousand people if they are friends already. This output is close to 400 mb of data uncompressed and text based. Considering we only used an Intel i5, with 4 cores; this amount of data had pretty good processing time.
 
-	In our implementation we tried to utilize the shared memory approach and only used the disk to give intermediate outputs. Even though in this application we didn’t need the disk to swap the data in and out, if we had larger dataset we could have implemented it the same way, only it would take significantly longer to process it due to cache misses and page faults.
+In our implementation we tried to utilize the shared memory approach and only used the disk to give intermediate outputs. Even though in this application we didn’t need the disk to swap the data in and out, if we had larger dataset we could have implemented it the same way, only it would take significantly longer to process it due to cache misses and page faults.
 
 5)RESOURCES
+
 MapReduce: Simpliﬁed Data Processing on Large Clusters - JeffreyDean and Sanjay Ghemawat - Google, Inc.
+
 MapReduce - Steve Krenzel - http://stevekrenzel.com/finding-friends-with-mapreduce
+
 Evaluating MapReduce for Multicore and Multiprocessor Systems - Colby Ranger, Ramanan Raghuraman, Arun Penmetsa, Gary Bradski, Christos Kozyrakis; Computer Systems Laboratory - Stanford University
+
 Phoenix Project - https://github.com/kozyraki/phoenix
 

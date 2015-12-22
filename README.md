@@ -35,8 +35,7 @@ Reduce(input key, values1[ ] values2[ ]){
 	for each v in values1
 		if(v exists in values2)			//Applied to all pairs with the same key
 			resultList.append(v);
-	
-Emit(key, resultList);				//Final output sorted by key
+	Emit(key, resultList);				//Final output sorted by key
 }
 
 

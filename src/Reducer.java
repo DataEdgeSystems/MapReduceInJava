@@ -82,7 +82,7 @@ public class Reducer implements Runnable{
 					token2=keyScanner2.nextToken();
 				token2=token2.substring(0,token2.length()-1);
 				int second2 = Integer.parseInt(token2);
-				if((first==first2 && second==second2) || (first==second2 && second==first2))
+				if(first==second2 && second==first2)
 					break;
 			}
 			im.close();

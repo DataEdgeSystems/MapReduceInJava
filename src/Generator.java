@@ -3,8 +3,8 @@ import java.util.concurrent.CountDownLatch;
 
 public class Generator {
 	private static final int N = 4039;
-	private static final int blockSize = 25;
-	private static final int totalThreads = (N/blockSize)+1;
+	private static final int blockSize = 5;
+	private static final int totalThreads = (N/blockSize);
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		CountDownLatch doneMapping = new CountDownLatch(totalThreads);

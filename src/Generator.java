@@ -23,7 +23,7 @@ public class Generator {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		System.out.println("Mapping fisnished!");
+		System.out.println("Mapping finished!");
 
 		
 		for(int i=0; i<N; i=i+blockSize){
@@ -36,7 +36,7 @@ public class Generator {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println("Reducing fisnished!");
+		System.out.println("Reducing finished!");
 	}
 
 }

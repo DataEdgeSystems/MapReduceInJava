@@ -1,4 +1,4 @@
-# MapReduceInJava
+# Map Reduce In Java
 
 MapReduce algorithm simualted on a Facebook Dataset using the Java Virtual Machine's multithreadding facilities.
 
@@ -10,11 +10,11 @@ FINDING COMMON FRIENDS IN A SOCIAL NETWORK DATASET
 
 Arya Volkan Şen
 
-1)INTRODUCTION
+1) INTRODUCTION
 
 As multi-core chips become ubiquitous, we need parallel programs that can exploit more than one processor. Our project is about multi-core implementation of mapreduce algorithm and we are finding common friends in a social network dataset.
 
-2)MAPREDUCE OVERVIEW
+2) MAPREDUCE OVERVIEW
 	
 MapReduce is a programming model and an associated implementation for processing and generating large data sets with a parallel, distributed algorithm on a cluster. MapReduce algorithm has two functions that are Map and Reduce. Map function extracts something you care about and group by key. The intermediate output is a set of <key , value> pairs. The reduce function is applied to all intermediate output with the same key. Reduce function aggregates and summarizes them and write the result.
 
@@ -33,7 +33,7 @@ Our dataset is coming from Facebook and includes more than 4 thousand people wit
 
 In our implementation we tried to utilize the shared memory approach and only used the disk to give intermediate outputs. Even though in this application we didn’t need the disk to swap the data in and out, if we had larger dataset we could have implemented it the same way, only it would take significantly longer to process it due to cache misses and page faults.
 
-5)RESOURCES
+5) RESOURCES
 
 MapReduce: Simpliﬁed Data Processing on Large Clusters - JeffreyDean and Sanjay Ghemawat - Google, Inc.
 
